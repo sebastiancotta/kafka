@@ -1,0 +1,12 @@
+
+S	java:S106"9Replace this use of System.out or System.err by a logger.(¬Õ‡„ıÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ı÷Ààÿÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ÜÎáúøÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ç°û»úÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(êß¿ü
+N	java:S106"9Replace this use of System.out or System.err by a logger.(£×Û
+t
+java:S2142"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(ä ¹€
+S	java:S106""9Replace this use of System.out or System.err by a logger.(×ã§ÿÿÿÿÿ
+M
+java:S1128"2Remove this unused import 'java.util.Collections'.(¢³ïÓşÿÿÿÿ
