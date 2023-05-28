@@ -1,0 +1,19 @@
+
+K
+java:S3740"/Provide the parametrized type for this generic.(ÊÌ-8ûğä¿…1
+\
+java:S6213":Rename this variable to not match a restricted identifier.(ŸÔ†¸üÿÿÿÿ8‘õö–…1
+U	java:S106"9Replace this use of System.out or System.err by a logger.(ÇˆÆğ8‘õö–…1
+Z	java:S106"9Replace this use of System.out or System.err by a logger.( éôùÿÿÿÿ8‘õö–…1
+U	java:S106"9Replace this use of System.out or System.err by a logger.(¾Ñî–8‘õö–…1
+U	java:S106"9Replace this use of System.out or System.err by a logger.(âº¿¤8’õö–…1
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(¶Äƒºıÿÿÿÿ8’õö–…1
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(Í€²˜úÿÿÿÿ8’õö–…1
+n
+java:S1128"LRemove this unused import 'org.apache.kafka.clients.consumer.KafkaConsumer'.(ËÁ²‹úÿÿÿÿ8®ñä¿…1
+Q
+java:S1128"/Remove this unused import 'java.time.Duration'.(ëá¯‰üÿÿÿÿ8®ñä¿…1
+T
+java:S1128	"2Remove this unused import 'java.util.Collections'.(¢³ïÓşÿÿÿÿ8®ñä¿…1
+N
+java:S1128"1Remove this unused import 'java.util.Properties'.(¬µ²8¯ñä¿…1
