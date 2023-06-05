@@ -2,22 +2,8 @@
 :
 
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
-w
-Gcommon-kafka/src/main/java/br/com/alura/ecommerce/ConsumerFunction.java,1\7\17e4b8f1ad1c36cb8438fd3a242b82a1f9b91041
-w
-Gcommon-kafka/src/main/java/br/com/alura/ecommerce/GsonDeserializer.java,7\3\73545e301f62f56a2a904c66f91fb4250efe4b76
-u
-Ecommon-kafka/src/main/java/br/com/alura/ecommerce/GsonSerializer.java,6\f\6ffc89ab102551e4e119d21da6be87152bd01590
-s
-Ccommon-kafka/src/main/java/br/com/alura/ecommerce/KafkaService.java,1\2\126dd6aa2308acfa926361891609470686f70051
 G
 common-kafka/.gitignore,e\4\e4e0535962afa57cc43adc8aa007ae8ff0d7d6cf
-D
-common-kafka/pom.xml,6\4\645e261e804ead94718b7fa1fc81b3f538554525
-7
-pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
-t
-Dservice-email/src/main/java/br/com/alura/ecommerce/EmailService.java,e\8\e8b4a3c0a8943d5e7b7c10b92c755693fa5c6aea
 H
 service-email/.gitignore,9\b\9ba0c0eaf318aba12143fbb5b3b0e810b068d67d
 E
@@ -28,8 +14,6 @@ N
 service-fraud-detector/pom.xml,d\6\d66e21c53788ee5da6ccd41561a82cd74edf3bf5
 Q
 !service-http-ecommerce/.gitignore,b\a\bad4c08210349218d3420ff54df24bfdb14a9858
-p
-@service-log/src/main/java/br/com/alura/ecommerce/LogService.java,8\9\89f55020065c264ba3058150a3cc79bf5a47153a
 C
 service-log/pom.xml,5\3\53930f26e092026a97492f813c6dfd7fd8982c48
 q
@@ -42,3 +26,19 @@ H
 service-users/.gitignore,6\4\64b99987c712ad1f6d640249d645fbecbc7d1566
 E
 service-users/pom.xml,2\3\23dac6e78c7e39fdb6380fcabb5ea8307408cb42
+s
+Cservice-reading-report/src/main/java/br/com/alura/ecommerce/IO.java,8\f\8f61b3f264c422c465a5de2055fa560067f3d2e6
+u
+Eservice-reading-report/src/main/java/br/com/alura/ecommerce/User.java,4\f\4f49e21194043e59461ffbe115151582032d96d0
+v
+Fservice-http-ecommerce/src/main/java/br/com/alura/ecommerce/Order.java,0\a\0ab449141e0522fe4803b9e3062af8ea50eeebab
+N
+service-http-ecommerce/pom.xml,7\7\7712283598b24cad7a92b77065a4da46fcd3cd98
+N
+service-reading-report/pom.xml,a\6\a607e01826a9620285f75abbc7be84083a86401f
+D
+common-kafka/pom.xml,6\4\645e261e804ead94718b7fa1fc81b3f538554525
+v
+Fservice-email/src/main/java/br/com/alura/ecommerce/ServiceFactory.java,f\0\f0d60b603091e7eaa7b99b6b25f67742762e515a
+w
+Gservice-email/src/main/java/br/com/alura/ecommerce/ConsumerService.java,5\f\5f77b9915d2079a674cad5ee09cde7780ad14758

@@ -7,34 +7,35 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.math.BigDecimal;
-import java.util.UUID;
 import java.util.concurrent.ExecutionException;
 
-public class NewOrderServlet extends HttpServlet {
-    private final KafkaDispatcher<Order> orderDispatcher = new KafkaDispatcher<Order>();
+public class GenerateAllReportsServlet extends HttpServlet {
+    private final KafkaDispatcher<String> batchKafkaDispatcher = new KafkaDispatcher<>();
 
     @Override
     public void destroy() {
         super.destroy();
-        orderDispatcher.close();
+        batchKafkaDispatcher.close();
     }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try {
-            var email = req.getParameter("email");
-            var orderId = UUID.randomUUID().toString();
-            var amount = new BigDecimal(req.getParameter("amount"));
-            var order = new Order(orderId, amount, email);
-            orderDispatcher.send("ECOMMERCE_NEW_ORDER", email, new CorrelationId(NewOrderServlet.class.getSimpleName()),order);
-            System.out.println("New order sent successfully");
+
+            batchKafkaDispatcher.send("ECOMMERCE_SEND_MESSAGE_TO_ALL_USERS", "ECOMMERCE_USER_GENERATE_READING_REPORT",
+                    new CorrelationId(GenerateAllReportsServlet.class.getSimpleName()),
+                    "ECOMMERCE_USER_GENERATE_READING_REPORT");
+
+            System.out.println("Sent generate report to all usres");
             resp.setStatus(HttpServletResponse.SC_OK);
-            resp.getWriter().println("New order sent successfully");
+            resp.getWriter().println("Report requests generated");
+
         } catch (ExecutionException e) {
             throw new ServletException(e);
         } catch (InterruptedException e) {
             throw new ServletException(e);
         }
+
+
     }
 }

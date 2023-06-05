@@ -1,20 +1,26 @@
 package br.com.alura.ecommerce;
 
+import br.com.alura.ecommerce.consumer.ConsumerService;
+import br.com.alura.ecommerce.consumer.ServiceRunner;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 
-import java.util.Map;
-
-public class EmailService {
+public class EmailService implements ConsumerService<String> {
 
     public static void main(String[] args) {
-        var emailService = new EmailService();
-        try(var service = new KafkaService<String>(EmailService.class.getSimpleName(), "ECOMMERCE_SEND_EMAIL", emailService::parse,
-                String.class, Map.of())){
-            service.run();
-        }
-
+        new ServiceRunner<>(EmailService::new).start(5);
     }
-    private void parse(ConsumerRecord<String, String> record) {
+
+    @Override
+    public String getConsumerGroup() {
+        return EmailService.class.getSimpleName();
+    }
+
+    @Override
+    public String getTopic() {
+        return "ECOMMERCE_SEND_EMAIL";
+    }
+
+    public void parse(ConsumerRecord<String, Message<String>> record) {
         System.out.println("key " + record.key());
         System.out.println("value " + record.value());
         System.out.println("offset " + record.offset());
