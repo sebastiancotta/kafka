@@ -20,7 +20,7 @@ public class EmailService implements ConsumerService<String> {
         return "ECOMMERCE_SEND_EMAIL";
     }
 
-    public void parse(ConsumerRecord<String, Message<String>> record) {
+    public void parse(ConsumerRecord<String, Message<String>> record) throws Exception {
         System.out.println("key " + record.key());
         System.out.println("value " + record.value());
         System.out.println("offset " + record.offset());

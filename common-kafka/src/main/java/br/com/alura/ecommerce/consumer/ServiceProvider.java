@@ -2,7 +2,6 @@ package br.com.alura.ecommerce.consumer;
 
 import java.util.Map;
 import java.util.concurrent.Callable;
-import java.util.concurrent.ExecutionException;
 
 public class ServiceProvider<T> implements Callable<Void> {
 
@@ -12,10 +11,16 @@ public class ServiceProvider<T> implements Callable<Void> {
         this.factory = factory;
     }
 
-    public Void call() throws ExecutionException, InterruptedException {
+    public Void call() throws Exception {
         var myService = factory.create();
-        try(var service = new KafkaService<T>(myService.getConsumerGroup()
-                , myService.getTopic(), myService::parse, Map.of())){
+        try (var service = new KafkaService<T>(myService.getConsumerGroup()
+                , myService.getTopic(), record -> {
+            try {
+                myService.parse(record);
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+        }, Map.of())) {
             service.run();
         }
         return null;
